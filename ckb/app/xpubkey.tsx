@@ -85,7 +85,7 @@ export function XpubkeyForm() {
               <FormItem>
                 <FormLabel>Address Type</FormLabel>
                 <FormControl>
-                  <RadioGroup {...field}>
+                  <RadioGroup onValueChange={field.onChange} defaultValue={field.value}>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="0" id="receive" />
                       <Label htmlFor="receive">Receiving</Label>
@@ -119,9 +119,9 @@ export function XpubkeyForm() {
       {
         pkInfo && (
           <div>
-            <p>blake160:<span className="pl-2 text-gray-900 font-bold">{pkInfo.blake160}</span></p>
-            <p>path:<span className="pl-2 text-gray-900 font-bold">{pkInfo.path}</span></p>
-            <p>publicKey:<span className="pl-2 text-gray-900 font-bold">{pkInfo.publicKey}</span></p>
+            <p>Blake160:<span className="pl-2 text-gray-900 font-bold">{pkInfo.blake160}</span></p>
+            <p>Path:<span className="pl-2 text-gray-900 font-bold">{pkInfo.path}</span></p>
+            <p>Public Key:<span className="pl-2 text-gray-900 font-bold">{pkInfo.publicKey}</span></p>
           </div>
         )
       }
